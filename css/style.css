@@ -1,0 +1,411 @@
+@font-face {
+    font-family: myFFont;
+    src: url("../fonts/FontsFree-Net-Art-nuvo.ttf");
+}
+@font-face {
+    font-family: mySFont;
+    src: url("../fonts/Carollo-Playscript-Medium.otf");
+}
+@font-face {
+    font-family: myThFont;
+    src: url("../fonts/BAHNSCHRIFT.TTF");
+}
+@font-face {
+    font-family: myFrFont;
+    src: url("../fonts/digital-7.ttf");
+}
+@font-face {
+    font-family: myTFont;
+    src: url("../fonts/norwester.otf");
+}
+@font-face {
+    font-family: myFiFont;
+    src: url("../fonts/RobotoSlab-VariableFont_wght.ttf");
+}
+@font-face {
+    font-family: mySiFont;
+    src: url("../fonts/Carollo-Playscript-Regular-Italic.otf");
+}
+@font-face {
+    font-family: mySeFont;
+    src: url("../fonts/Carollo-Playscript-Medium-Italic.otf");
+}
+
+body{
+    overflow:hidden;
+    background-image: url(../images/lk-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0px;
+}
+.result-body{
+    overflow: hidden;
+}
+#background-video {
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+}
+.type_storm_video-overlay{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: rgba(0,0,0,.8);
+}
+
+
+.type_storm-overlay{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: rgba(0,0,0,.6);
+}
+.intro-heading{
+    margin-top: 40px;
+    font-family: "myFFont";
+    color: #c2c2c2;
+    font-size: 70pt;
+    text-align: center;
+    cursor: default;
+}
+.intro-heading h1::selection{
+    background: none;
+}
+.intro-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%);
+}
+#intro-name{
+    height: 55px;
+    font-size: 21pt;
+    width: 350px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #d1d1d1;
+    font-family: "mySFont";
+    font-weight: 600;
+    border:none;
+    border-radius: 30px;
+}
+#intro-name::placeholder{
+    color: #4d4d4d;
+}
+#intro-name::selection{
+    background-color: black;
+    color: #d1d1d1;
+}
+#intro-btn{
+    margin-top: 55px;
+    font-family: "myTFont";
+    font-size: 22pt;
+    height: 55px;
+    width: 140px;
+    border-radius: 30px;
+    color: #d1d1d1;
+    background: none;
+    border: 3px solid #d1d1d1;
+}
+#intro-btn:hover{
+    background-color: #d1d1d1;
+    color: black;
+}
+.intro-logos{
+    position: fixed;
+    bottom: 1px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    color: #d1d1d1;
+    font-size: 20pt;
+    font-family: "mySFont";
+    cursor: default;
+}
+.intro-logo-event{
+    margin-left: 5px;
+}
+.intro-logo-event::selection{
+    background: none;
+}
+.intro-logo-fest::selection{
+    background: none;
+}
+.intro-logo-fest{
+    margin-right: 5px;
+}
+.main-container{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: rgba(0,0,0,.6);
+}
+.logo-container{
+    position: absolute;
+    top: 10px;
+    left: 20px;
+}
+.lk-logo{
+    font-family: "myFFont";
+    color: white;
+    font-size: 60pt;
+}
+.game-area{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    height: 56%;
+    width: 50%;
+    background-color: rgba(255,255,255,0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "mySFont";
+    font-size: 20pt;
+    text-align: center;
+}
+#lkQuestion{
+    position: relative;
+    top: 10%;
+    margin-left: 7px;
+    margin-right: 7px;
+}
+#textAnswer{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 30px;
+    width: 250px;
+    border: none;
+    border-bottom: 3px solid black;
+    font-family: "mySFont";
+    font-size: 15px;
+    padding-left: 8px;
+}
+#CheckBtn{
+    position: absolute;
+    bottom: 10%;
+    transform: translate(-50%,0%);
+    height: 70px;
+    width: 170px;
+    margin-top: 30px;
+    font-family: "mySFont";
+    font-size: 17pt;
+    border:5px solid Black;
+    background: none;
+    color: Black;
+    border-radius: 10px;
+}
+
+#CheckBtn:hover{
+    box-shadow: 0 0 10px Black,
+    0 0 10px Black,
+    0 0 10px Black,
+    0 0 10px Black;
+}
+.FileButtons{
+    display: flex;
+    color: white;
+    background-color: #3f3f3f;
+    height: 45px;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    top: 5px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    align-items: center;
+}
+.nav-btn{
+    display: flex;
+    width: 110px;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#back-btn img{
+    width: 30px;
+    height: 30px;
+}
+#forward-btn img{
+    width: 30px;
+    height: 30px;
+}
+#home-btn img{
+    width: 25px;
+    height: 25px;
+}
+#filePath{
+    margin-left: 10px;
+    width: 80%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    background-color: #1b1b1b;
+    border-radius: 20px;
+    padding-left: 22px;
+    font-family: "mySFont";
+    font-size: 11pt;
+}
+.loki-logo{
+    font-family: "myFFont";
+    margin-left: 2%;
+    font-size: 15pt;
+}
+#fileSystem{
+    position: absolute;
+    top: 65px;
+    margin-left: 20px;
+    width: 100%;
+    padding-right: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.each-folder{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.each-folder img{
+    width: 80px;
+}
+#FolderName{
+    font-size: 15pt;
+    position: relative;
+    top: -10px;
+}
+.each-file{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.each-file img{
+    width: 80px;
+}
+#FileName{
+    font-size: 15pt;
+    position: relative;
+    top: -8px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+.each-image{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.each-image img{
+    width: 80px;
+}
+#imageName{
+    font-size: 15pt;
+    position: relative;
+    top: 3px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+.each-image2{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.each-image2 img{
+    width: 80px;
+}
+#imageName2{
+    font-size: 15pt;
+    position: relative;
+    top: 3px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+.result-main{
+    color: #b7b7b7;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%,-50%);
+    margin-left: 50px;
+}
+.result-main-1{
+    display: flex;
+    justify-content: center;
+    font-family: "mySeFont";
+    font-style: italic;
+    font-size: 45pt;
+}
+.result-main-2{
+    display: flex;
+    justify-content: center;
+    font-family: "mySiFont";
+    font-size: 35pt;
+    margin-bottom: 50px;
+    margin-top: -90px;
+}
+.result-main-2 h1{
+    font-weight: 500;
+}
+.result-main-3{
+    display: flex;
+    justify-content: space-between;
+    font-family: "myFiFont";
+}
+.result-measure{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: -40px;
+}
+.measure-label{
+    font-size: 20pt;
+    font-weight: 500;
+}

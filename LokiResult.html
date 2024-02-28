@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+        <link class="icon" rel="icon" href="images/icons/Layer%203.png" />
+
+        <link rel="stylesheet" href="css/style.css" />
+
+        <title>Lock Key</title>
+    </head>
+    
+    <body>
+        <div class="result-body">
+            <video id="background-video" autoplay loop muted poster="images/lk-background.jpg">
+              <source src="images/lk-live.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="type_storm_video-overlay">
+            <section class="type_storm-contest">
+                <div class="contest-heading">
+                    <h1>Lock Key</h1>
+                </div>
+                <div class="result-main">
+                    <div class="result-main-1">
+                        <h1>Congratulations</h1>
+                    </div>
+                    <div class="result-main-2">
+                        <h1 id="usrn">User Name</h1>
+                    </div>
+                    
+                    <div class="result-main-3">
+                        <div class="result-measure">
+                            <div class="measure-label">Time Taken: <span id="LokiFTime">0</span></div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="intro-logos">
+                    <div class="intro-logo-event">Exodia</div>
+                    <div class="intro-logo-fest">Bodhi 2024</div>
+                </div>
+            </section>
+        </div>
+        <script type="application/javascript">
+            function getCookie(cname) {
+                let name = cname + "=";
+                let ca = document.cookie.split(';');
+                for(let i = 0; i < ca.length; i++) {
+                    let c = ca[i];
+                    while (c.charAt(0) == ' ') {
+                      c = c.substring(1);
+                    }
+                    if (c.indexOf(name) == 0) {
+                      return c.substring(name.length, c.length);
+                    }
+                }
+                return "";
+            }
+            let LokiTotalTime=getCookie("Timer");
+            let LokiS=LokiTotalTime%60;
+            let LokiM=Math.floor(LokiTotalTime/60);
+            document.getElementById("usrn").innerHTML=getCookie("username");
+            document.getElementById("LokiFTime").innerHTML=LokiM+"M"+" : "+LokiS+"S";
+        </script>
+    </body>
+</html>
